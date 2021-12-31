@@ -25,6 +25,7 @@ extension CGPoint {
 
     /// Creates a point with unnamed arguments.
     public init(_ x: CGFloat, _ y: CGFloat) {
+        self.init()
         self.x = x
         self.y = y
     }
@@ -45,6 +46,7 @@ extension CGSize {
 
     /// Creates a size with unnamed arguments.
     public init(_ width: CGFloat, _ height: CGFloat) {
+        self.init()
         self.width = width
         self.height = height
     }
@@ -65,12 +67,14 @@ extension CGRect {
 
     /// Creates a rect with unnamed arguments.
     public init(_ origin: CGPoint, _ size: CGSize) {
+        self.init()
         self.origin = origin
         self.size = size
     }
 
     /// Creates a rect with unnamed arguments.
     public init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+        self.init()
         self.origin = CGPoint(x: x, y: y)
         self.size = CGSize(width: width, height: height)
     }
@@ -252,8 +256,10 @@ extension CGRect {
 
     /// Modifies the x and y values by offsetting.
     public mutating func offsetInPlace(_ dx: CGFloat, _ dy: CGFloat) {
-        offsetInPlace(dx, dy)
+        offsetInPlace(dx: dx)
+        offsetInPlace(dy: dy)
     }
+    
     /// Modifies the x value values by offsetting.
     public mutating func offsetInPlace(dx: CGFloat = 0) {
         x += dx

@@ -4,5 +4,6 @@
 *.xcworkspace/*.mode*
 *.xcworkspace/*.pbxuser
 *.xcworkspace/*.perspective*
+xcshareddata
 xcuserdata
 .DS_store
