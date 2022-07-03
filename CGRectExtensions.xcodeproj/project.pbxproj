@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1117F59A2871B0B30097DF14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1117F5992871B0B30097DF14 /* Foundation.framework */; };
-		242C642019D5CF5100D51D9F /* CGRectExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 242C641F19D5CF5100D51D9F /* CGRectExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1117F59B2871B2C30097DF14 /* CGRectExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 242C641F19D5CF5100D51D9F /* CGRectExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		242C643B19D5CFBA00D51D9F /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BBDFD19D4A89F00A782E2 /* CGRectExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -122,7 +122,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				242C642019D5CF5100D51D9F /* CGRectExtensions.h in Headers */,
+				1117F59B2871B2C30097DF14 /* CGRectExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +164,7 @@
 				};
 			};
 			buildConfigurationList = 247BBDF219D4A89F00A782E2 /* Build configuration list for PBXProject "CGRectExtensions" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -218,7 +218,11 @@
 				INFOPLIST_FILE = Sources/CGRectExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nschum.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -239,7 +243,11 @@
 				INFOPLIST_FILE = Sources/CGRectExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nschum.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -360,7 +368,8 @@
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
