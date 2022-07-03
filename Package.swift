@@ -3,6 +3,7 @@
 
 
 import PackageDescription
+import Foundation
 
 let package = Package(
     name: "CGRectExtentions",
